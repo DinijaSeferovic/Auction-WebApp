@@ -1,4 +1,4 @@
-package com.praksa.auctionapp;
+package com.auctionapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

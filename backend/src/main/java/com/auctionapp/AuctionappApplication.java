@@ -1,4 +1,4 @@
-package com.praksa.auctionapp;
+package com.auctionapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
