@@ -1,2 +1,39 @@
 @import '../../../../variables.scss';
 
+.header {
+  background: $dark;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  
+  flex-direction: row;
+  align-items: center;
+
+  &_socialmedia {
+    
+    margin: 0 0 0 179px;
+
+    ul {
+      margin:0;
+      padding: 0;
+      list-style:none;
+
+      li {
+        display:inline;
+        padding-right: 16.4px;
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+      }
+    }     
+  }
+
+  &_righttext {
+    color: $light;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0 0 0 915px;
+  }
+}
