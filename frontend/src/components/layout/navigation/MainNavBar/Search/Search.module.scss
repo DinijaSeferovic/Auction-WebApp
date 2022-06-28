@@ -1,0 +1,30 @@
+@import '../../../../../variables.scss';
+
+.search {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  width: 548px;
+  height: 57.94px;
+  background: $light;
+  border: 1px solid $border;
+
+  form {
+    input {
+      border: 0px;
+      width: 450px;
+      height: 50px;
+    }
+  }
+
+  img {
+    width: 17.08px;
+    height: 17.08px;
+    left: 12.5%;
+    right: 16.35%;
+    top: 16.67%;
+    bottom: 12.15%;
+  }
+}
