@@ -5,13 +5,14 @@
   height: 40px;
   width: 100%;
   display: flex;
-  flex-wrap: nowrap;
   flex-direction: row;
+  flex-grow: 1;
+  flex-basis: 0;
   align-items: center;
 
   &_socialmedia {
     
-    margin: 0 0 0 179px;
+    padding-left: 13%;
 
     ul {
       margin: 0;
@@ -19,8 +20,8 @@
       list-style: none;
 
       li {
-        display: inline;
-        padding-right: 16.4px;
+        display: inline-block;
+        padding-right: 20px;
 
         img {
             width: 24px;
@@ -34,6 +35,6 @@
     color: $light;
     font-weight: 700;
     font-size: 14px;
-    margin: 0 0 0 915px;
+    padding-left: 56%;
   }
 }
