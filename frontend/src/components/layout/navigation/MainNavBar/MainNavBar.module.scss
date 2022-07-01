@@ -8,7 +8,7 @@
   flex-direction: row;
   align-items: center;
 
-  .logo {
+  &_logo {
     margin-left: 185px;
     margin-top: 15px;
 
@@ -19,18 +19,17 @@
     }
   }
 
-  .searchbar {
+  &_searchbar {
     margin-left: 75px;
     margin-top: 15px;
   }
 
-  .navbar {
+  &_navbar {
     margin-left: 25px;
     margin-top: 15px;
     
     
     nav {
-        list-style: none;
         ul {
             margin: 0;
             padding: 0;
@@ -39,7 +38,7 @@
             li {
               display: inline-block;
       
-              a {
+              .navlink {
                 font-family: $Lato;
                 font-style: normal;
                 font-weight: 300;
@@ -48,7 +47,7 @@
                 color: $dark;
                 margin-right: 30px;
                 text-decoration: none;
-            }
+              }
             }
           }     
         

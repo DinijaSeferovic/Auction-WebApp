@@ -13,6 +13,7 @@
   &_socialmedia {
     
     padding-left: 13%;
+    position: absolute;
 
     ul {
       margin: 0;
@@ -35,6 +36,9 @@
     color: $light;
     font-weight: 700;
     font-size: 14px;
-    padding-left: 56%;
+    font-family: 'Lato';
+    font-style: normal;
+    right: 20%;
+    position: absolute;
   }
 }
