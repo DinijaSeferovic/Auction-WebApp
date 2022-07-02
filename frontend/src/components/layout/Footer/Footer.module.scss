@@ -1,8 +1,9 @@
-@import '../../../../variables.scss';
+@import '../../../variables.scss';
 
 .footer {
-  position: fixed;
+  margin-top: auto;
   left: 0;
+  right: 0;
   bottom: 0;
   width: 100%;
   height: 300px;

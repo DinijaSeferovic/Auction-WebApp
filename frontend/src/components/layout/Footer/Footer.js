@@ -16,7 +16,7 @@ const Footer = () => {
                             <Link to="/aboutus" className={classes.link}>About Us</Link>
                         </li>
                         <li>
-                            <Link to="/terms" className={classes.link}>Terms and Conditions</Link>
+                            <Link to="/termsandconditions" className={classes.link}>Terms and Conditions</Link>
                         </li>
                         <li>
                             <Link to="/privacypolicy" className={classes.link}>Privacy and Policy</Link>
@@ -37,7 +37,7 @@ const Footer = () => {
                         <li>
                             <a href="https://facebook.com" target="_blank" rel="noreferrer">
                                 <img
-                                    src={require('../../../../assets/images/icons/facebook-icon.png')}
+                                    src={require('../../../assets/images/icons/facebook-icon.png')}
                                     alt="facebook"
                                 />
                             </a>
@@ -45,7 +45,7 @@ const Footer = () => {
                         <li>
                             <a href="https://instagram.com" target="_blank" rel="noreferrer">
                                 <img
-                                    src={require('../../../../assets/images/icons/instagram-icon.png')}
+                                    src={require('../../../assets/images/icons/instagram-icon.png')}
                                     alt="instagram"
                                 />
                             </a>
@@ -53,7 +53,7 @@ const Footer = () => {
                         <li>
                             <a href="https://twitter.com" target="_blank" rel="noreferrer">
                                 <img
-                                    src={require('../../../../assets/images/icons/twitter-icon.png')}
+                                    src={require('../../../assets/images/icons/twitter-icon.png')}
                                     alt="twitter"
                                 />
                             </a>
