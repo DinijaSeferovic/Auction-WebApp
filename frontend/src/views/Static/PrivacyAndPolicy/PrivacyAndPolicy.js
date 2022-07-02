@@ -1,9 +1,11 @@
 import React from 'react'
 import classes from './PrivacyAndPolicy.module.scss'
+import Title from '../../../components/layout/Title/Title'
 
 const PrivacyAndPolicy = () => {
   return (
     <div>
+		<Title name="Privacy and Policy" />
         <div className={classes.privacytext}>
             <h1>Privacy Policy for Auction App</h1>
 

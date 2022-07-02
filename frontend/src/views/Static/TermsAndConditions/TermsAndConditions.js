@@ -1,9 +1,11 @@
 import React from 'react'
 import classes from './TermsAndConditions.module.scss'
+import Title from '../../../components/layout/Title/Title'
 
 const TermsAndConditions = () => {
   return (
     <div>
+        <Title name="Terms and Conditions" />
         <div className={classes.termstext}>
             <h1>Terms and Conditions for Auction App</h1>
 

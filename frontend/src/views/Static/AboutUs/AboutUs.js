@@ -1,9 +1,11 @@
 import React from 'react'
 import classes from './AboutUs.module.scss'
+import Title from '../../../components/layout/Title/Title'
 
 const AboutUs = () => {
   return (
     <div>
+		<Title name="About Us" />
         <div className={classes.aboutcontent}>
 			<div className={classes.aboutcontent_text}>
 				<h1>About Us</h1>
