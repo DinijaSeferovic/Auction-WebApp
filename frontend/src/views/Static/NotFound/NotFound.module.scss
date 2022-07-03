@@ -3,8 +3,9 @@
 .notfound {
     display: grid;
     grid-template-rows: 1fr 2fr 0.5fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 40px;
     justify-items: center;
+    padding-top: 50px;
 
     img {
       width: 163px;
@@ -19,6 +20,10 @@
       font-size: 192px;
       letter-spacing: 0.84px;
       color: $primary;
+
+      @media screen and (max-width: 600px) {
+        font-size: 120px;
+      }
     }
 
 		h3 {
@@ -29,5 +34,9 @@
 			line-height: 51px;
 			letter-spacing: 0.84px;
 			color: $darker;
+
+      @media screen and (max-width: 600px) {
+        font-size: 16px;
+      }
 		}
 }
