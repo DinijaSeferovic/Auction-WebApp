@@ -1,10 +1,12 @@
 import React from 'react'
 import classes from './TermsAndConditions.module.scss'
 import Title from '../../../components/layout/Title/Title'
+import MainNavBar from '../../../components/layout/navigation/MainNavBar/MainNavBar'
 
 const TermsAndConditions = () => {
   return (
     <div>
+        <MainNavBar />
         <Title name="Terms and Conditions" />
         <div className={classes.termstext}>
             <h1>Terms and Conditions for Auction App</h1>

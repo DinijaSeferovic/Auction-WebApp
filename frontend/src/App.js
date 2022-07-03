@@ -1,5 +1,4 @@
 import Header from './components/layout/navigation/Header/Header';
-import MainNavBar from './components/layout/navigation/MainNavBar/MainNavBar';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.scss';
 import Footer from './components/layout/Footer/Footer';
@@ -15,7 +14,6 @@ function App() {
 		<BrowserRouter>
 			<div className="content-wrap">
 				<Header />
-				<MainNavBar />
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="aboutus" element={<AboutUs />} />

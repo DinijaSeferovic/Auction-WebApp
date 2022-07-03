@@ -1,10 +1,12 @@
 import React from 'react'
 import classes from './AboutUs.module.scss'
 import Title from '../../../components/layout/Title/Title'
+import MainNavBar from '../../../components/layout/navigation/MainNavBar/MainNavBar'
 
 const AboutUs = () => {
   return (
     <div>
+		<MainNavBar />
 		<Title name="About Us" />
         <div className={classes.aboutcontent}>
 			<div className={classes.aboutcontent_text}>
