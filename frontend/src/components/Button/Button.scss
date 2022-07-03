@@ -1,0 +1,99 @@
+@import '../../variables.scss';
+
+@mixin small() {
+  width: 115px;
+  height: 50px;
+}
+
+@mixin medium() {
+  width: 150px;
+  height: 50px;
+}
+
+@mixin large() {
+	width: 550px;
+	height: 60px;
+}
+
+.btn {
+  font-family: $Lato;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.63px;
+  text-transform: capitalize;
+
+	&.primary-solid {
+		border: none;
+		background-color: $primary;
+		color: $light;
+		
+		&.small {
+			@include small();
+		}
+
+		&.medium {
+			@include medium();
+		}
+
+		&.large {
+			@include large();
+		}
+	}
+	
+	&.secondary-solid {
+		border: none;
+		background-color: $secondary;
+		color: $dark;
+
+		&.small {
+			@include small();
+		}
+
+		&.medium {
+			@include medium();
+		}
+
+		&.large {
+			@include large();
+		}
+	}
+	
+	&.primary-outline {
+		border: 3px solid;
+		border-color: $primary;
+		color: $dark;
+		background: transparent;
+
+		&.small {
+			@include small();
+		}
+
+		&.medium {
+			@include medium();
+		}
+
+		&.large {
+			@include large();
+		}
+	}
+	
+	&.secondary-outline {
+		border: 3px solid;
+		border-color: $secondary;
+		color: $dark;
+		background: transparent;
+
+		&.small {
+			@include small();
+		}
+
+		&.medium {
+			@include medium();
+		}
+
+		&.large {
+			@include large();
+		}
+	}
+}
