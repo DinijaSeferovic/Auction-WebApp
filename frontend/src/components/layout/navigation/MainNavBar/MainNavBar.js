@@ -19,7 +19,7 @@ const MainNavBar = () => {
 			<nav>
 				<ul>
 					<li>
-						<NavLink to="/"  className={classes.navlink}>HOME</NavLink>
+						<NavLink to="/"  className={({ isActive }) => (isActive ? `${classes.navlink_active}` : `${classes.navlink}`)}>HOME</NavLink>
 					</li>
 					{/* 
 					<li>

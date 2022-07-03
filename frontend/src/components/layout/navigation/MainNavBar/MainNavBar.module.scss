@@ -74,31 +74,34 @@
     @media screen and (min-width: 1000px) and (max-width: 1300px) {
       padding-left: 10%;
     }
-
     
     nav {
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
       
-            li {
-              display: inline-block;
+        li {
+          display: inline-block;
       
-              .navlink {
-                font-family: $Lato;
-                font-style: normal;
-                font-weight: 300;
-                font-size: 16px;
-                line-height: 19px;
-                color: $dark;
-                margin-right: 30px;
-                text-decoration: none;
-              }
-            }
-          }     
-        
+          .navlink {
+            font-family: $Lato;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            color: $dark;
+            margin-right: 30px;
+            text-decoration: none;
 
+            &_active {
+              color: $primary;
+              text-decoration: none;
+              font-weight: 700;
+            }
+          }
+        }     
+      }
     }
   }
 }
