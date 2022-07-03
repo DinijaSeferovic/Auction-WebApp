@@ -13,7 +13,7 @@ const MainNavBar = () => {
 			/>
 		</div>
 		<div className={classes.mainnavbar_searchbar}>
-			<Search />
+			{/*<Search />*/}
 		</div>
 		<div className={classes.mainnavbar_navbar}>
 			<nav>
