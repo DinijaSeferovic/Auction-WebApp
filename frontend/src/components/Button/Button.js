@@ -1,31 +1,25 @@
-import React from "react";
-import './Button.scss';
+import "./Button.scss";
 
-const styles = [
-    "primary-solid",
-    "secondary-solid",
-    "primary-outline",
-    "secondary-outline"
-]
+var classNames = require("classnames");
+const Button = ({
+	label,
+	onClick,
+	type = "button",
+	variant = "primary",
+	size = "small",
+	outlined = true,
+}) => {
+	return (
+		<div>
+			<button
+				className={classNames("btn", `btn_${variant}`, { [`btn_${variant}_outline`]: outlined }, `btn_${size}`)}
+				type={type}
+				onClick={onClick}
+			>
+				{label}
+			</button>
+		</div>
+	);
+};
 
-const sizes = [
-    "small",
-    "medium",
-    "large"
-]
-
-const Button = (props) => {
-
-    const checkButtonStyle = styles.includes(props.btnStyle) ? props.btnStyle : styles[0];
-    const checkButtonSize = sizes.includes(props.btnSize) ? props.btnSize : sizes[0];
-
-    return (
-        <div>
-            <button className={`btn ${checkButtonStyle} ${checkButtonSize}`} type={props.type} onClick={props.onClick}>
-                {props.children}
-            </button>
-        </div>
-    );
-}
-
-export default Button
+export default Button;

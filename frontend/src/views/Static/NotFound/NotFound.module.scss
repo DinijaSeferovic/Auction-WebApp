@@ -1,42 +1,42 @@
-@import '../../../variables.scss';
+@import "../../../_variables.scss";
 
 .notfound {
-    display: grid;
-    grid-template-rows: 1fr 2fr 0.5fr 1fr;
-    grid-gap: 40px;
-    justify-items: center;
-    padding-top: 50px;
+	display: grid;
+	grid-template-rows: 1fr 2fr 0.5fr 1fr;
+	grid-gap: 40px;
+	justify-items: center;
+	padding-top: 50px;
 
-    img {
-      width: 163px;
-      height: 56px;
-			align-self: center;
-    }
+	img {
+		width: 163px;
+		height: 56px;
+		align-self: center;
+	}
 
-    h1 {
-      font-family: $Lato;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 192px;
-      letter-spacing: 0.84px;
-      color: $primary;
+	h1 {
+		font-family: $Lato;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 192px;
+		letter-spacing: 0.84px;
+		color: $primary;
 
-      @media screen and (max-width: 600px) {
-        font-size: 120px;
-      }
-    }
-
-		h3 {
-			font-family: $Lato;
-			font-style: normal;
-			font-weight: 400;
-			font-size: 32px;
-			line-height: 51px;
-			letter-spacing: 0.84px;
-			color: $darker;
-
-      @media screen and (max-width: 600px) {
-        font-size: 16px;
-      }
+		@media screen and (max-width: 600px) {
+			font-size: 120px;
 		}
+	}
+
+	h3 {
+		font-family: $Lato;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 51px;
+		letter-spacing: 0.84px;
+		color: $darker;
+
+		@media screen and (max-width: 600px) {
+			font-size: 16px;
+		}
+	}
 }
