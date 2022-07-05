@@ -1,0 +1,50 @@
+@import "../../_variables.scss";
+
+.btn {
+	font-family: $Lato;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	letter-spacing: 0.63px;
+	text-transform: capitalize;
+	cursor: pointer;
+
+	&_small {
+		width: 115px;
+		height: 50px;
+	}
+
+	&_medium {
+		width: 150px;
+		height: 50px;
+	}
+
+	&_large {
+		width: 550px;
+		height: 60px;
+	}
+
+	&_primary {
+		background-color: $primary;
+		color: $light;
+		border: none;
+
+		&_outline {
+			background: transparent;
+			color: $dark;
+			border: 3px solid $primary;
+		}
+	}
+
+	&_secondary {
+		background-color: $secondary;
+		color: $dark;
+		border: none;
+
+		&_outline {
+			background: transparent;
+			color: $dark;
+			border: 3px solid $secondary;
+		}
+	}
+}
