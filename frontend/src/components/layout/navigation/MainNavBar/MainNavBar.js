@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import logo from "../../../../assets/images/logos/logo-small.png";
 import Icon from "../../../Icon/Icon";
 import classes from "./MainNavBar.module.scss";
+import Search from "./Search/Search";
 
 const MainNavBar = () => {
 	return (
@@ -15,7 +16,9 @@ const MainNavBar = () => {
 					src={logo}
 				/>
 			</div>
-			<div className={classes.mainnavbar_searchbar}>{/*<Search />*/}</div>
+			<div className={classes.mainnavbar_searchbar}>
+				<Search />
+			</div>
 			<div className={classes.mainnavbar_navbar}>
 				<nav>
 					<ul>

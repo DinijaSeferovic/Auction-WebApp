@@ -1,6 +1,6 @@
+import classnames from 'classnames';
 import "./Button.scss";
 
-var classNames = require("classnames");
 const Button = ({
 	label,
 	onClick,
@@ -12,7 +12,7 @@ const Button = ({
 	return (
 		<div>
 			<button
-				className={classNames("btn", `btn_${variant}`, { [`btn_${variant}_outline`]: outlined }, `btn_${size}`)}
+				className={classnames("btn", `btn_${variant}`, { [`btn_${variant}_outline`]: outlined }, `btn_${size}`)}
 				type={type}
 				onClick={onClick}
 			>

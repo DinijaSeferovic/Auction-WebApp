@@ -41,9 +41,9 @@
 		}
 	}
 
-	img {
-		width: 17px;
-		height: 17px;
+	&_icon {
 		position: relative;
+		pointer-events: none;
+		cursor: default;
 	}
 }

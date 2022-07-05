@@ -1,10 +1,12 @@
+import Breadcrumbs from "../navigation/Breadcrumbs/Breadcrumbs";
 import classes from "./Title.module.scss";
 
 const Title = ({ name }) => {
 	return (
 		<div className={classes.titlecontainer}>
-			<div className={classes.title}>
-				<h5>{name}</h5>
+			<div className={classes.title}>{name}</div>
+			<div className={classes.breadcrumbs}>
+				<Breadcrumbs />
 			</div>
 		</div>
 	);

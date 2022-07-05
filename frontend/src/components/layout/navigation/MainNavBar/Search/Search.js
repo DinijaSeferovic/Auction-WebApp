@@ -1,3 +1,5 @@
+import searchIcon from "../../../../../assets/images/icons/search-icon.png";
+import Icon from "../../../../Icon/Icon";
 import classes from "./Search.module.scss";
 
 const Search = () => {
@@ -6,10 +8,15 @@ const Search = () => {
 			<form>
 				<input type="text" placeholder="Try enter: Shoes" />
 			</form>
-			<img
-				src={require("../../../../../assets/images/icons/search-icon.png")}
-				alt="search"
-			/>
+			<div className={classes.search_icon}>
+				<Icon
+					alt="search"
+					href=""
+					isExternal={true}
+					size="small"
+					src={searchIcon}
+				/>
+			</div>
 		</div>
 	);
 };

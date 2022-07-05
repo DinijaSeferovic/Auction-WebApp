@@ -1,3 +1,6 @@
+import cowgirlImage from "../../../assets/images/people/cowgirl-about.jpeg";
+import girlImage from "../../../assets/images/people/girl-about.jpeg";
+import manImage from "../../../assets/images/people/man-about.jpg";
 import MainNavBar from "../../../components/layout/navigation/MainNavBar/MainNavBar";
 import Title from "../../../components/layout/Title/Title";
 import classes from "./AboutUs.module.scss";
@@ -52,21 +55,9 @@ const AboutUs = () => {
 					</p>
 				</div>
 				<div className={classes.aboutcontent_imagegrid}>
-					<img
-						src={require("../../../assets/images/people/girl-about.jpeg")}
-						alt="girl"
-						id={classes.first}
-					/>
-					<img
-						src={require("../../../assets/images/people/cowgirl-about.jpeg")}
-						alt="cowgirl"
-						id={classes.second}
-					/>
-					<img
-						src={require("../../../assets/images/people/man-about.jpg")}
-						alt="man"
-						id={classes.third}
-					/>
+					<img src={girlImage} alt="girl" id={classes.first} />
+					<img src={cowgirlImage} alt="cowgirl" id={classes.second} />
+					<img src={manImage} alt="man" id={classes.third} />
 				</div>
 			</div>
 		</div>

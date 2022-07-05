@@ -28,8 +28,7 @@ function App() {
 						<Route path="*" element={<NotFound />} />
 						{/* 
 					<Route path="shop" element={<Shop />} />
-					<Route path="account" element={<Account />} />
-					*/}
+					<Route path="account" element={<Account />} />*/}
 					</Routes>
 				</div>
 				<Footer />

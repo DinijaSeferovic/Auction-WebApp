@@ -1,16 +1,23 @@
 @import "../../_variables.scss";
 
-.small {
-	width: 17px;
-	height: 17px;
-}
+.icon {
+	&_xsmall {
+		width: 10px;
+		height: 9px;
+	}
 
-.medium {
-	width: 24px;
-	height: 24px;
-}
+	&_small {
+		width: 17px;
+		height: 17px;
+	}
 
-.large {
-	width: 163px;
-	height: 56px;
+	&_medium {
+		width: 24px;
+		height: 24px;
+	}
+
+	&_large {
+		width: 163px;
+		height: 56px;
+	}
 }
