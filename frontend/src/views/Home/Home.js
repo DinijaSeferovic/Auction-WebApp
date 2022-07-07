@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import CategoryContainer from "../../components/category/CategoryContainer/CategoryContainer";
+=======
+import CategoryHighlightContainer from "../../components/CategoryHighlightContainer/CategoryHighlightContainer";
+>>>>>>> b7f18e8... Add product highlight and category container
 import MainNavBar from "../../components/layout/navigation/MainNavBar/MainNavBar";
 import ProductHighlight from "../../components/product/ProductHighlight/ProductHighlight";
 import ProductsTab from "../../components/product/ProductsTab/ProductsTab";
