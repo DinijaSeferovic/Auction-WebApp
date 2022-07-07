@@ -12,7 +12,7 @@ const Search = () => {
 				<Icon
 					alt="search"
 					href=""
-					isExternal={true}
+					isExternal={false}
 					size="small"
 					src={searchIcon}
 				/>

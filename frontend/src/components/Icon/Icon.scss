@@ -20,4 +20,14 @@
 		width: 163px;
 		height: 56px;
 	}
+
+	&_xlarge {
+		width: 355px;
+		height: 420px;
+	}
+
+	&_unlinked {
+		pointer-events: none;
+		cursor: default;
+	}
 }

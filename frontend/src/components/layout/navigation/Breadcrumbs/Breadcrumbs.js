@@ -25,7 +25,13 @@ const Breadcrumbs = () => {
 						{breadcrumb}
 					</NavLink>
 					{index !== breadcrumbs.length - 1 ? (
-						<div className={classes.breadcrumbs_content_icon}><Icon isExternal={false} size="xsmall" src={bcIcon} /></div>
+						<div className={classes.breadcrumbs_content_icon}>
+							<Icon
+								isExternal={false}
+								size="xsmall"
+								src={bcIcon}
+							/>
+						</div>
 					) : (
 						""
 					)}
