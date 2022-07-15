@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import Category from "../Category/Category";
 import classes from "./CategoryContainer.module.scss";
 
-const CategoryContainer = ({ name }) => {
-	const [categories, setCategories] = useState(null);
+const CategoryContainer = () => {
+	const [categories, setCategories] = useState([]);
 
 	useEffect(() => {
-		fetch()
+		fetch("/api/category/main-categories")
 			.then((response) => {
 				if (!response.ok) {
 					throw new Error(
@@ -23,15 +23,20 @@ const CategoryContainer = ({ name }) => {
 
 	return (
 		<div className={classes.category_container}>
-			<div className={classes.category_container_title}> {name} </div>
+			<div className={classes.category_container_title}> Categories </div>
 			<ul>
 				{categories.map((category) => (
 					<li key={category.id}>
 						<div className={classes.category_container_item}>
-							<Category id={category.id} name={category} />
+							<Category id={category.id} name={category.name} />
 						</div>
 					</li>
 				))}
+				<li>
+					<div className={classes.category_container_item}>
+						<Category name={"All Categories"} />
+					</div>
+				</li>
 			</ul>
 		</div>
 	);

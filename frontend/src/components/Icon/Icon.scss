@@ -21,6 +21,12 @@
 		height: 56px;
 	}
 
+	&_mlarge {
+		width: 262px;
+		height: 262px;
+		object-fit: cover;
+	}
+
 	&_xlarge {
 		width: 355px;
 		height: 420px;
