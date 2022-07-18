@@ -1,15 +1,15 @@
 CREATE TABLE category
 (
-    id          SERIAL NOT NULL,
-    name        VARCHAR(255),
+    id          UUID DEFAULT gen_random_uuid() NOT NULL,
+    name        VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
 );
 
 CREATE TABLE subcategory
 (
-    id          SERIAL NOT NULL,
-    name        VARCHAR(255),
-    category_id INTEGER,
+    id          UUID DEFAULT gen_random_uuid() NOT NULL,
+    name        VARCHAR(255) NOT NULL,
+    category_id UUID,
     PRIMARY KEY (id),
     FOREIGN KEY(category_id)
         REFERENCES category(id)
@@ -17,20 +17,16 @@ CREATE TABLE subcategory
 
 CREATE TABLE product
 (
-    id          SERIAL NOT NULL,
-    name        VARCHAR(255),
-    category_id INTEGER,
-    subcategory_id INTEGER,
-    description VARCHAR(255),
-    image       VARCHAR(255),
+    id          UUID DEFAULT gen_random_uuid() NOT NULL,
+    name        VARCHAR(255) NOT NULL,
+    category_id UUID,
+    subcategory_id UUID,
+    description VARCHAR(255) NOT NULL,
+    image_path  VARCHAR(255),
     seller_id   INTEGER,
-    start_price DOUBLE PRECISION,
-    start_date  TIMESTAMP,
-    end_date    TIMESTAMP,
-    active      BOOLEAN,
-    sold        BOOLEAN,
-    size        VARCHAR(255),
-    color       VARCHAR(255),
+    start_price DOUBLE PRECISION NOT NULL,
+    start_date  TIMESTAMP NOT NULL,
+    end_date    TIMESTAMP NOT NULL,
     buyer_id    INTEGER,
     PRIMARY KEY (id),
     FOREIGN KEY(category_id)
