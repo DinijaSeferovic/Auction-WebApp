@@ -16,8 +16,8 @@ const CategoryContainer = () => {
 		<div className={classes.category_container}>
 			<div className={classes.category_container_title}> Categories </div>
 			<ul>
-				{categories.map((category) => (
-					<li key={category.id}>
+				{categories.map((category, i) => (
+					<li key={i}>
 						<div className={classes.category_container_item}>
 							<Category name={category.name} />
 						</div>

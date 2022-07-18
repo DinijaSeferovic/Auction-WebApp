@@ -45,8 +45,8 @@ const ProductsTab = ({ apiProducts }) => {
 	return (
 		<div>
 			<div className={"product_container"}>
-				{productData.products.map((product) => (
-					<li key={product.id}>
+				{productData.products.map((product, i) => (
+					<li key={i}>
 						<div className={"product_container_item"}>
 							<Product product={product} imgSize="small" />
 						</div>
