@@ -1,5 +1,6 @@
-import CategoryHighlightContainer from "../../components/container/CategoryHighlightContainer/CategoryHighlightContainer";
+import CategoryContainer from "../../components/category/CategoryContainer/CategoryContainer";
 import MainNavBar from "../../components/layout/navigation/MainNavBar/MainNavBar";
+import ProductHighlight from "../../components/product/ProductHighlight/ProductHighlight";
 import ProductsTab from "../../components/product/ProductsTab/ProductsTab";
 import TabContainer from "../../components/tabs/TabContainer/TabContainer";
 
@@ -9,7 +10,10 @@ const Home = () => {
 	return (
 		<div className={classes.homepage}>
 			<MainNavBar />
-			<CategoryHighlightContainer />
+			<div className={classes.categoryhighlight}>
+				<CategoryContainer />
+				<ProductHighlight />
+			</div>
 			<TabContainer>
 				<div label="New Arrivals">
 					<ProductsTab apiProducts={"/api/products/new-arrivals"} />

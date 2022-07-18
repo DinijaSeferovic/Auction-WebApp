@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import categoryService from "../../../services/categoryService";
 import Category from "../Category/Category";
 import classes from "./CategoryContainer.module.scss";
 
@@ -6,29 +7,19 @@ const CategoryContainer = () => {
 	const [categories, setCategories] = useState([]);
 
 	useEffect(() => {
-		fetch("/api/category/main-categories")
-			.then((response) => {
-				if (!response.ok) {
-					throw new Error(
-						`This is an HTTP error: The status is ${response.status}`
-					);
-				}
-				return response.json();
-			})
-			.then((data) => setCategories(data))
-			.catch((err) => {
-				console.log(err.message);
-			});
+		categoryService
+			.getMainCategories()
+			.then((response) => setCategories(response));
 	}, []);
 
 	return (
 		<div className={classes.category_container}>
 			<div className={classes.category_container_title}> Categories </div>
 			<ul>
-				{categories.map((category) => (
-					<li key={category.id}>
+				{categories.map((category, i) => (
+					<li key={i}>
 						<div className={classes.category_container_item}>
-							<Category id={category.id} name={category.name} />
+							<Category name={category.name} />
 						</div>
 					</li>
 				))}

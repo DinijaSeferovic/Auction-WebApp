@@ -1,47 +1,38 @@
 import { useEffect, useState } from "react";
 import arrowIcon from "../../../assets/images/icons/greater-than-icon.png";
+import productService from "../../../services/productService";
 import Button from "../../Button/Button";
-import Icon from "../../Icon/Icon";
+import Image from "../../Image/Image";
 import classes from "./ProductHighlight.module.scss";
 
 const ProductHighlight = () => {
-	const [name, setName] = useState("Running Shoes");
-	const [startPrice, setStartPrice] = useState(59.0);
-	const [image, setImage] = useState("/products/product-running-shoes.png");
-	const [description, setDescription] = useState(
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum hendrerit odio a erat lobortis auctor. Curabitur sodales pharetra placerat. Aenean auctor luctus tempus. Cras laoreet et magna in dignissim. Nam et tincidunt augue."
-	);
+	const [product, setProduct] = useState({
+		name: "",
+		description: "",
+		imagePath: "/products/no-img.png",
+		startPrice: 0,
+		startDate: "",
+		endDate: "",
+	});
 
 	useEffect(() => {
-		fetch("/api/products/highlight-product")
-			.then((response) => {
-				if (!response.ok) {
-					throw new Error(
-						`This is an HTTP error: The status is ${response.status}`
-					);
-				}
-				return response.json();
-			})
-			.then((data) => {
-				setName(data.name);
-				setStartPrice(data.startPrice);
-				setImage(data.image);
-				setDescription(data.description);
-			})
-			.catch((err) => {
-				console.log(err.message);
-			});
+		productService
+			.getProductHighlight()
+			.then((response) => setProduct(response));
 	}, []);
-	var path = require(`../../../assets/images${image}`);
+
+	let path = require(`../../../assets/images${product.imagePath}`);
 	return (
 		<div className={classes.container}>
 			<div className={classes.container_info}>
-				<div className={classes.container_info_name}>{name}</div>
+				<div className={classes.container_info_name}>
+					{product.name}
+				</div>
 				<div className={classes.container_info_price}>
-					{`Start From $${startPrice.toFixed(2)}`}
+					{`Start From $${product.startPrice.toFixed(2)}`}
 				</div>
 				<div className={classes.container_info_description}>
-					{description}
+					{product.description}
 				</div>
 				<div className={classes.container_info_button}>
 					<Button
@@ -49,18 +40,12 @@ const ProductHighlight = () => {
 						variant="primary"
 						size="large"
 						outlined={true}
-						icon={true}
 						iconSrc={arrowIcon}
 					/>
 				</div>
 			</div>
 			<div className={classes.container_image}>
-				<Icon
-					src={path}
-					alt="Product image"
-					size="xlarge"
-					isExternal={false}
-				/>
+				<Image src={path} alt="Product image" size="large" />
 			</div>
 		</div>
 	);

@@ -9,13 +9,7 @@ const Search = () => {
 				<input type="text" placeholder="Try enter: Shoes" />
 			</form>
 			<div className={classes.search_icon}>
-				<Icon
-					alt="search"
-					href=""
-					isExternal={false}
-					size="small"
-					src={searchIcon}
-				/>
+				<Icon alt="search" href="" size="small" src={searchIcon} />
 			</div>
 		</div>
 	);

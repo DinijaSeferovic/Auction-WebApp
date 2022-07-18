@@ -9,8 +9,7 @@ const Button = ({
 	variant = "primary",
 	size = "small",
 	outlined = true,
-	icon = false,
-	iconSrc = "",
+	iconSrc,
 }) => {
 	return (
 		<div>
@@ -25,14 +24,12 @@ const Button = ({
 				onClick={onClick}
 			>
 				<div
-					className={classnames("btn", "btn_content", {
-						[`btn_content_icon`]: icon,
+					className={classnames("btn_content", {
+						[`btn_content_icon`]: iconSrc,
 					})}
 				>
 					{label}
-					{icon ? (
-						<Icon src={iconSrc} size="xsmall" isExternal={false} />
-					) : null}
+					{iconSrc && <Icon src={iconSrc} size="xsmall" />}
 				</div>
 			</button>
 		</div>

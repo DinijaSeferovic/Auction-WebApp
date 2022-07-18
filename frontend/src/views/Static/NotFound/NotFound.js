@@ -10,13 +10,7 @@ const NotFound = () => {
 		<div>
 			<div className={classes.notfound}>
 				<div className={classes.notfound_icon}>
-					<Icon
-						alt="logo"
-						href="/"
-						isExternal={false}
-						size="large"
-						src={logo}
-					/>
+					<Icon alt="logo" href="/" size="large" src={logo} />
 				</div>
 				<h1>404</h1>
 				<h3>Ooops! Looks like the page is Not Found</h3>
