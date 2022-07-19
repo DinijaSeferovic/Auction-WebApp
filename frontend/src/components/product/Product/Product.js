@@ -26,7 +26,10 @@ const Product = ({ product, imgSize = "small" }) => {
 			<div className={"product_price"}>
 				{product.highestBid ? "Highest bid" : "Start From"}
 				<span className={"product_price_amount"}>
+<<<<<<< HEAD
 					{"$"}
+=======
+>>>>>>> fe20713... Add id to dto
 					{product.highestBid
 						? product.highestBid.toFixed(2)
 						: product.startPrice.toFixed(2)}
