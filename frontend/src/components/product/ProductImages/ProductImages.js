@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "../../Image/Image";
 import classes from "./ProductImages.module.scss";
 
@@ -6,6 +6,10 @@ const ProductImages = ({ images }) => {
 	let imageArray = JSON.parse(images);
 
 	const [selectedImg, setSelectedImg] = useState(imageArray[0]);
+
+	useEffect(() => {
+		setSelectedImg(JSON.parse(images)[0]);
+	}, [images]);
 
 	return (
 		<div className={classes.container}>
