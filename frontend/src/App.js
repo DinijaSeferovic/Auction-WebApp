@@ -1,4 +1,3 @@
-import "react-app-polyfill/stable";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import Footer from "./components/layout/Footer/Footer";
@@ -31,7 +30,6 @@ function App() {
 							path="single-product/:id"
 							element={<SingleProduct />}
 						/>
-						<Route path="/404" element={<NotFound />} />
 						<Route path="*" element={<NotFound />} />
 						{/* 
 					<Route path="shop" element={<Shop />} />

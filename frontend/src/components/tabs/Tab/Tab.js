@@ -1,7 +1,7 @@
 import React from "react";
 import "./Tab.scss";
 
-const Tab = ({ activeTab, setActiveTab, label }) => {
+const Tab = ({ activeTab, setActiveTab, label, size }) => {
 	const handleClick = () => {
 		setActiveTab(label);
 	};

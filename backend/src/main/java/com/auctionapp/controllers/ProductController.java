@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/products")
@@ -27,6 +28,11 @@ public class ProductController {
     @GetMapping("/highlight")
     public ProductDTO getHighlightProduct() {
         return productService.getHighlightProduct();
+    }
+
+    @GetMapping("/{id}")
+    public ProductDTO getProduct(@PathVariable UUID id) {
+        return productService.getProduct(id);
     }
 
     @GetMapping("/last-chance")

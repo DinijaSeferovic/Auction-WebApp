@@ -10,6 +10,7 @@ const Button = ({
 	size = "small",
 	outlined = true,
 	iconSrc,
+	disabled = false,
 }) => {
 	return (
 		<div>
@@ -22,14 +23,15 @@ const Button = ({
 				)}
 				type={type}
 				onClick={onClick}
+				disabled={disabled}
 			>
-				<div
-					className={classnames("btn_content", {
-						[`btn_content_icon`]: iconSrc,
-					})}
-				>
+				<div className={classnames("btn_content")}>
 					{label}
-					{iconSrc && <Icon src={iconSrc} size="xsmall" />}
+					{iconSrc && (
+						<div className={classnames("btn_content_icon")}>
+							<Icon src={iconSrc} size="xsmall" />
+						</div>
+					)}
 				</div>
 			</button>
 		</div>

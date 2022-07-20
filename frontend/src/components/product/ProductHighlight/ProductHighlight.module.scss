@@ -20,13 +20,17 @@
 		height: 100%;
 
 		&_name {
-			font-family: $Lato;
-			font-style: normal;
-			font-weight: 400;
-			font-size: 32px;
-			line-height: 50px;
-			color: $darker;
 			order: 0;
+
+			&_link {
+				font-family: $Lato;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 32px;
+				line-height: 50px;
+				color: $darker;
+				text-decoration: none;
+			}
 		}
 
 		&_price {
