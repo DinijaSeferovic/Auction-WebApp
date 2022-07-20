@@ -4,4 +4,8 @@ const getProductHighlight = () => {
 	return api.httpGet("/api/products/highlight");
 };
 
-export default { getProductHighlight };
+const getProduct = (id) => {
+	return api.httpGet(`/api/products/${id}`);
+};
+
+export default { getProductHighlight, getProduct };

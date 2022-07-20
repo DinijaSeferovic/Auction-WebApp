@@ -1,0 +1,43 @@
+@import "../../_variables.scss";
+
+.field {
+	form {
+		input {
+			border: 0px;
+			padding-left: 20px;
+
+			&:focus {
+				outline: none;
+			}
+			&::placeholder {
+				font-family: "Lato";
+				font-style: normal;
+				font-weight: 300;
+				font-size: 16px;
+				line-height: 20px;
+			}
+		}
+
+		.small {
+			width: 330px;
+			height: 49px;
+
+			@media screen and (max-width: 750px) {
+				width: 250px;
+			}
+		}
+
+		.medium {
+			width: 450px;
+			height: 50px;
+
+			@media screen and (max-width: 750px) {
+				width: 200px;
+			}
+
+			@media screen and (min-width: 750px) and (max-width: 1250px) {
+				width: 300px;
+			}
+		}
+	}
+}

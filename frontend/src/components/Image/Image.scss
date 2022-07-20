@@ -1,6 +1,12 @@
 @import "../../_variables.scss";
 
 .image {
+	&_xsmall {
+		width: 70px;
+		height: 100px;
+		object-fit: cover;
+	}
+
 	&_small {
 		width: 262px;
 		height: 262px;
@@ -22,6 +28,12 @@
 	&_xlarge {
 		width: 355px;
 		height: 475px;
+		object-fit: cover;
+	}
+
+	&_xxlarge {
+		width: 455px;
+		height: 620px;
 		object-fit: cover;
 	}
 }

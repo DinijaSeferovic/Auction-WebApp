@@ -14,7 +14,7 @@ const Home = () => {
 				<CategoryContainer />
 				<ProductHighlight />
 			</div>
-			<TabContainer>
+			<TabContainer size="large">
 				<div label="New Arrivals">
 					<ProductsTab apiProducts={"/api/products/new-arrivals"} />
 				</div>

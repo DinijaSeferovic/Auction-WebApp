@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import arrowIcon from "../../../assets/images/icons/greater-than-icon.png";
 import productService from "../../../services/productService";
 import Button from "../../Button/Button";
@@ -9,7 +10,7 @@ const ProductHighlight = () => {
 	const [product, setProduct] = useState({
 		name: "",
 		description: "",
-		imagePath: "/products/no-img.png",
+		imagePath: '["/products/no-img.png"]',
 		startPrice: 0,
 		startDate: "",
 		endDate: "",
@@ -21,12 +22,19 @@ const ProductHighlight = () => {
 			.then((response) => setProduct(response));
 	}, []);
 
-	let path = require(`../../../assets/images${product.imagePath}`);
+	let imagePath = JSON.parse(product.imagePath)[0];
+	let path = require(`../../../assets/images${imagePath}`);
+	const navigate = useNavigate();
 	return (
 		<div className={classes.container}>
 			<div className={classes.container_info}>
 				<div className={classes.container_info_name}>
-					{product.name}
+					<Link
+						to={`/single-product/${product.id}`}
+						className={classes.container_info_name_link}
+					>
+						{product.name}
+					</Link>
 				</div>
 				<div className={classes.container_info_price}>
 					{`Start From $${product.startPrice.toFixed(2)}`}
@@ -41,11 +49,19 @@ const ProductHighlight = () => {
 						size="large"
 						outlined={true}
 						iconSrc={arrowIcon}
+						onClick={() => {
+							navigate(`/single-product/${product.id}`);
+						}}
 					/>
 				</div>
 			</div>
 			<div className={classes.container_image}>
-				<Image src={path} alt="Product image" size="large" />
+				<Image
+					src={path}
+					alt="Product image"
+					size="large"
+					href={`/single-product/${product.id}`}
+				/>
 			</div>
 		</div>
 	);

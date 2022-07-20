@@ -59,5 +59,9 @@
 		justify-content: center;
 		align-items: center;
 		gap: 16px;
+
+		&_icon {
+			padding-bottom: 4px;
+		}
 	}
 }

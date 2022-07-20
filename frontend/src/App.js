@@ -3,6 +3,7 @@ import "./App.scss";
 import Footer from "./components/layout/Footer/Footer";
 import Header from "./components/layout/navigation/Header/Header";
 import Home from "./views/Home/Home";
+import SingleProduct from "./views/SingleProduct/SingleProduct";
 import AboutUs from "./views/Static/AboutUs/AboutUs";
 import NotFound from "./views/Static/NotFound/NotFound";
 import PrivacyAndPolicy from "./views/Static/PrivacyAndPolicy/PrivacyAndPolicy";
@@ -24,6 +25,10 @@ function App() {
 						<Route
 							path="privacy-policy"
 							element={<PrivacyAndPolicy />}
+						/>
+						<Route
+							path="single-product/:id"
+							element={<SingleProduct />}
 						/>
 						<Route path="*" element={<NotFound />} />
 						{/* 
