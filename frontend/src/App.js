@@ -31,6 +31,7 @@ function App() {
 							path="single-product/:id"
 							element={<SingleProduct />}
 						/>
+						<Route path="/404" element={<NotFound />} />
 						<Route path="*" element={<NotFound />} />
 						{/* 
 					<Route path="shop" element={<Shop />} />
