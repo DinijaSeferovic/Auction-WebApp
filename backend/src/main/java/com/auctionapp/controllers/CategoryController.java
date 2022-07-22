@@ -1,6 +1,5 @@
 package com.auctionapp.controllers;
 
-import com.auctionapp.domains.Category;
 import com.auctionapp.dto.CategoryDTO;
 import com.auctionapp.services.CategoryService;
 import org.springframework.web.bind.annotation.CrossOrigin;

@@ -9,6 +9,8 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SubcategoryDTO {
+
     private UUID id;
+
     private String name;
 }

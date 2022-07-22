@@ -13,11 +13,12 @@ import java.util.UUID;
 @Getter
 @Setter
 public class Category {
+
     @Id @Type(type = "pg-uuid")
     @Column(nullable = false)
     @GeneratedValue
     private UUID id;
+
     @Column(nullable = false)
     private String name;
-
 }

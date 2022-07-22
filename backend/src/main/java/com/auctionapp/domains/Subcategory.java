@@ -18,11 +18,12 @@ public class Subcategory {
     @Column(nullable = false)
     @GeneratedValue
     private UUID id;
+
     @Column(nullable = false)
     private String name;
+
     @ManyToOne
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;
-
 }
 

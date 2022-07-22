@@ -10,7 +10,8 @@ import java.time.LocalDateTime;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Integer> {
-    Page<Product> findByEndDateAfter(LocalDateTime date, Pageable pageable);
-    Product findTopByEndDateAfterOrderByEndDateAsc(LocalDateTime date);
 
+    Page< Product > findByEndDateAfter(LocalDateTime date, Pageable pageable);
+
+    Product findTopByEndDateAfterOrderByEndDateAsc(LocalDateTime date);
 }
