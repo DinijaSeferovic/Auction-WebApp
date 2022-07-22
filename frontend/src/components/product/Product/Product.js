@@ -26,6 +26,7 @@ const Product = ({ product, imgSize = "small" }) => {
 			<div className={"product_price"}>
 				{product.highestBid ? "Highest bid" : "Start From"}
 				<span className={"product_price_amount"}>
+					{"$"}
 					{product.highestBid
 						? product.highestBid.toFixed(2)
 						: product.startPrice.toFixed(2)}
