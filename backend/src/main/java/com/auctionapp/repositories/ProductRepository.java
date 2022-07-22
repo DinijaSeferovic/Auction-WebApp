@@ -15,11 +15,6 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
     Page< Product > findByEndDateAfter(LocalDateTime date, Pageable pageable);
 
     Product findTopByEndDateAfterOrderByEndDateAsc(LocalDateTime date);
-<<<<<<< HEAD
 
     Product findById(UUID id);
 }
-=======
-    Product findById(UUID id);
-}
->>>>>>> 60f6f38... Implement product page features

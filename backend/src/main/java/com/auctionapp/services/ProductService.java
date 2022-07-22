@@ -34,13 +34,8 @@ public class ProductService  {
     public ProductDTO getProduct(UUID id) {
         return convertEntityToDto(productRepository.findById(id));
     }
-<<<<<<< HEAD
     
     public List< ProductDTO > getProductsLastChance(int page, int limit){
-=======
-
-    public List<ProductDTO> getProductsLastChance(int page, int limit){
->>>>>>> 60f6f38... Implement product page features
         Pageable paging = PageRequest.of(page, limit, Sort.by(Sort.Order.asc("endDate")));
         Page< Product > pagedResult = productRepository.findByEndDateAfter(LocalDateTime.now(), paging);
         return pagedResult

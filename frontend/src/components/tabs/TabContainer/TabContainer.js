@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import Tab from "../Tab/Tab";
 import "./TabContainer.scss";
 
-const TabContainer = ({ children, size }) => {
+const TabContainer = ({ children }) => {
 	const [activeTab, setActiveTab] = useState(children[0].props.label);
 
 	return (
-		<div className={`tabs_${size}`}>
-			<ol className={`tabs_${size}_list`}>
+		<div className="tabs">
+			<ol className="tabs_list">
 				{children.map((child) => {
 					const { label } = child.props;
 
@@ -17,7 +17,6 @@ const TabContainer = ({ children, size }) => {
 							key={label}
 							label={label}
 							setActiveTab={setActiveTab}
-							size={size}
 						/>
 					);
 				})}

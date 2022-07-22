@@ -4,19 +4,20 @@ import Image from "../../Image/Image";
 import "./Product.scss";
 
 const Product = ({ product, imgSize = "small" }) => {
-	let imagePath = JSON.parse(product.imagePath)[0];
-	let path = require(`../../../assets/images${imagePath}`);
+	let path = require(`../../../assets/images${product.imagePath}`);
 	return (
 		<div className={"product"}>
 			<Image
 				src={path}
 				alt="Product image"
 				size={imgSize}
-				href={`/single-product/${product.id}`}
+				href="/single-product"
+				data={product}
 			/>
 			<div className={"product_name"}>
 				<Link
-					to={`/single-product/${product.id}`}
+					to="/single-product"
+					state={product}
 					className={"product_name_link"}
 				>
 					{product.name}
@@ -26,9 +27,13 @@ const Product = ({ product, imgSize = "small" }) => {
 				{product.highestBid ? "Highest bid" : "Start From"}
 				<span className={"product_price_amount"}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 					{"$"}
 =======
 >>>>>>> fe20713... Add id to dto
+=======
+					{"$"}
+>>>>>>> a5ea9af... Landing page (#4)
 					{product.highestBid
 						? product.highestBid.toFixed(2)
 						: product.startPrice.toFixed(2)}
