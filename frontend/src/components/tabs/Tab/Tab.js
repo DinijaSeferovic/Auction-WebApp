@@ -6,14 +6,14 @@ const Tab = ({ activeTab, setActiveTab, label }) => {
 		setActiveTab(label);
 	};
 
-	let className = "tab_listitem";
-
-	if (activeTab === label) {
-		className += "_active";
-	}
 	return (
 		<div>
-			<li className={className} onClick={handleClick}>
+			<li
+				className={`tab_listitem${
+					activeTab === label ? "_active" : ""
+				}`}
+				onClick={handleClick}
+			>
 				{label}
 			</li>
 		</div>

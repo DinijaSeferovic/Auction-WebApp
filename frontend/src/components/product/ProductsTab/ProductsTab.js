@@ -1,21 +1,20 @@
 import React, { useReducer, useRef } from "react";
-import {
-	useFetch,
-	useInfiniteScroll,
-	useLazyLoading,
-} from "../../../hooks/customHooks";
+import { useFetch } from "../../../hooks/useFetch";
+import { useInfiniteScroll } from "../../../hooks/useInfiniteScroll";
+import { useLazyLoading } from "../../../hooks/useLazyLoading";
+import actionTypes from "../../../utils/actionTypes";
 import Product from "../Product/Product";
 import "./ProductsTab.scss";
 
 const ProductsTab = ({ apiProducts }) => {
 	const productReducer = (state, action) => {
 		switch (action.type) {
-			case "STACK_PRODUCTS":
+			case actionTypes.STACK_PRODUCTS:
 				return {
 					...state,
 					products: state.products.concat(action.products),
 				};
-			case "FETCHING_PRODUCTS":
+			case actionTypes.FETCHING_PRODUCTS:
 				return { ...state, fetching: action.fetching };
 			default:
 				return state;
@@ -24,7 +23,7 @@ const ProductsTab = ({ apiProducts }) => {
 
 	const pageReducer = (state, action) => {
 		switch (action.type) {
-			case "ADVANCE_PAGE":
+			case actionTypes.ADVANCE_PAGE:
 				return { ...state, page: state.page + 1 };
 			default:
 				return state;
