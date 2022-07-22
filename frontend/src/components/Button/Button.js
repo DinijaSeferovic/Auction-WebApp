@@ -1,4 +1,5 @@
-import classnames from 'classnames';
+import classnames from "classnames";
+import Icon from "../Icon/Icon";
 import "./Button.scss";
 
 const Button = ({
@@ -8,15 +9,28 @@ const Button = ({
 	variant = "primary",
 	size = "small",
 	outlined = true,
+	iconSrc,
 }) => {
 	return (
 		<div>
 			<button
-				className={classnames("btn", `btn_${variant}`, { [`btn_${variant}_outline`]: outlined }, `btn_${size}`)}
+				className={classnames(
+					"btn",
+					`btn_${variant}`,
+					{ [`btn_${variant}_outline`]: outlined },
+					`btn_${size}`
+				)}
 				type={type}
 				onClick={onClick}
 			>
-				{label}
+				<div
+					className={classnames("btn_content", {
+						[`btn_content_icon`]: iconSrc,
+					})}
+				>
+					{label}
+					{iconSrc && <Icon src={iconSrc} size="xsmall" />}
+				</div>
 			</button>
 		</div>
 	);

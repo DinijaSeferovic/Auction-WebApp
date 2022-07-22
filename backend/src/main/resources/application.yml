@@ -1,1 +1,21 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:postgresql://localhost:5432/auctionappdb
+    username: postgres
+    password: password
+    driverClassName: org.postgresql.Driver
+  flyway:
+    locations: db/migration
+
+server:
+  error:
+    include-binding-errors: always
+    include-message: always
+
+
 

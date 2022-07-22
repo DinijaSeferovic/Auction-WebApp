@@ -20,4 +20,9 @@
 		width: 163px;
 		height: 56px;
 	}
+
+	&_unlinked {
+		pointer-events: none;
+		cursor: default;
+	}
 }

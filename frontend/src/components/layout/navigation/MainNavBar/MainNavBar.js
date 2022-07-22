@@ -8,13 +8,7 @@ const MainNavBar = () => {
 	return (
 		<div className={classes.mainnavbar}>
 			<div className={classes.mainnavbar_logo}>
-				<Icon
-					alt="logo"
-					href="/"
-					isExternal={false}
-					size="large"
-					src={logo}
-				/>
+				<Icon alt="logo" href="/" size="large" src={logo} />
 			</div>
 			<div className={classes.mainnavbar_searchbar}>
 				<Search />

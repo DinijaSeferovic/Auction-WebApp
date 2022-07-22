@@ -6,7 +6,7 @@ const Icon = ({
 	alt = "",
 	size = "small",
 	href = "",
-	isExternal = true,
+	isExternal = false,
 }) => {
 	return (
 		<div>

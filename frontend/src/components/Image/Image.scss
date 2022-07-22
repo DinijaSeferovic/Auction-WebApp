@@ -1,0 +1,27 @@
+@import "../../_variables.scss";
+
+.image {
+	&_small {
+		width: 262px;
+		height: 262px;
+		object-fit: cover;
+	}
+
+	&_medium {
+		width: 262px;
+		height: 350px;
+		object-fit: cover;
+	}
+
+	&_large {
+		width: 355px;
+		height: 420px;
+		object-fit: cover;
+	}
+
+	&_xlarge {
+		width: 355px;
+		height: 475px;
+		object-fit: cover;
+	}
+}
