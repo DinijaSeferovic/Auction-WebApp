@@ -18,6 +18,7 @@ import java.util.UUID;
 @Getter
 @Setter
 public class Product {
+
     @Id @Type(type = "pg-uuid")
     @Column(nullable = false)
     @GeneratedValue
