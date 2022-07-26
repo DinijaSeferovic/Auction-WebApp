@@ -1,13 +1,14 @@
 package com.auctionapp.repositories;
 
-import com.auctionapp.domains.Category;
+import com.auctionapp.domains.Image;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.UUID;
 
 @Repository
-public interface CategoryRepository extends JpaRepository<Category, Integer> {
+public interface ImageRepository extends JpaRepository<Image, UUID> {
 
-    List< Category > findTop9ByOrderByIdAsc();
+    List< Image > findByProductId(UUID id);
 }

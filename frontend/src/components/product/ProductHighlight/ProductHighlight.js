@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import arrowIcon from "../../../assets/images/icons/greater-than-icon.png";
+import imageService from "../../../services/imageService";
 import productService from "../../../services/productService";
 import Button from "../../Button/Button";
 import Image from "../../Image/Image";
@@ -10,11 +11,14 @@ const ProductHighlight = () => {
 	const [product, setProduct] = useState({
 		name: "",
 		description: "",
-		imagePath: '["/products/no-img.png"]',
 		startPrice: 0,
 		startDate: "",
 		endDate: "",
 	});
+
+	const [productImage, setProductImage] = useState([
+		{ imagePath: "/products/no-img.png" },
+	]);
 
 	useEffect(() => {
 		productService
@@ -22,8 +26,16 @@ const ProductHighlight = () => {
 			.then((response) => setProduct(response));
 	}, []);
 
-	let imagePath = JSON.parse(product.imagePath)[0];
-	let path = require(`../../../assets/images${imagePath}`);
+	useEffect(() => {
+		imageService
+			.getProductImage(product.id)
+			.then((response) => setProductImage(response));
+	}, [product]);
+
+	let path = "";
+	if (productImage) {
+		path = require(`../../../assets/images${productImage[0].imagePath}`);
+	}
 	const navigate = useNavigate();
 	return (
 		<div className={classes.container}>

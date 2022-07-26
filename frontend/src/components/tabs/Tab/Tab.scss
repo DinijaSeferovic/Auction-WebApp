@@ -11,6 +11,7 @@
 		letter-spacing: 0.84px;
 		color: $darker;
 		padding-bottom: 16px;
+		cursor: pointer;
 
 		&_active {
 			margin-right: 40px;
@@ -24,20 +25,19 @@
 			letter-spacing: 0.84px;
 			color: $darker;
 			padding-bottom: 16px;
+			cursor: pointer;
 		}
 	}
 
 	&_listitem_small {
-		padding-left: 20px;
-
-		padding-right: 20px;
+		padding: 0 20px 16px 20px;
 		font-family: $Lato;
 		font-style: normal;
 		font-weight: 300;
 		font-size: 16px;
 		line-height: 20px;
 		color: $darker;
-		padding-bottom: 16px;
+		cursor: pointer;
 
 		&_active {
 			padding-left: 20px;
@@ -50,6 +50,7 @@
 			line-height: 20px;
 			color: $primary;
 			padding-bottom: 16px;
+			cursor: pointer;
 		}
 	}
 }

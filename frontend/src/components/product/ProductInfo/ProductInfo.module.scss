@@ -38,34 +38,8 @@
 		gap: 10px;
 		border: 1px solid $border;
 
-		&_bid {
-			font-family: $Lato;
-			font-style: normal;
-			font-weight: 300;
-			font-size: 16px;
-			line-height: 20px;
-			color: $dark;
-
-			&_amount {
-				font-weight: 700;
-				color: $primary;
-			}
-		}
-
-		&_bids {
-			font-family: $Lato;
-			font-style: normal;
-			font-weight: 300;
-			font-size: 16px;
-			line-height: 20px;
-			color: $dark;
-
-			&_number {
-				font-weight: 700;
-				color: $primary;
-			}
-		}
-
+		&_bid,
+		&_bids,
 		&_timer {
 			font-family: $Lato;
 			font-style: normal;
@@ -73,11 +47,12 @@
 			font-size: 16px;
 			line-height: 20px;
 			color: $dark;
-
-			&_time {
-				font-weight: 700;
-				color: $primary;
-			}
+		}
+		&_bid_amount,
+		&_bids_number,
+		&_timer_time {
+			font-weight: 700;
+			color: $primary;
 		}
 	}
 	&_placebid {

@@ -11,7 +11,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/categories")
-@CrossOrigin(origins = "http://localhost:8080")
 public class CategoryController {
 
     private final CategoryService categoryService;
@@ -21,12 +20,12 @@ public class CategoryController {
     }
 
     @GetMapping("/main")
-    public List<CategoryDTO> getMainCategories() {
+    public List< CategoryDTO > getMainCategories() {
         return categoryService.getMainCategories();
     }
 
     @GetMapping
-    public List<CategoryDTO> getCategories() {
+    public List< CategoryDTO > getCategories() {
         return categoryService.getCategories();
     }
 }

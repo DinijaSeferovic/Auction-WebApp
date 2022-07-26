@@ -19,6 +19,7 @@ const Button = ({
 					"btn",
 					`btn_${variant}`,
 					{ [`btn_${variant}_outline`]: outlined },
+					{ [`btn_disabled`]: disabled },
 					`btn_${size}`
 				)}
 				type={type}

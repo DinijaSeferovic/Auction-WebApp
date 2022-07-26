@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "../../Image/Image";
 import classes from "./ProductImages.module.scss";
 
 const ProductImages = ({ images }) => {
-	let imageArray = JSON.parse(images);
+	const [selectedImg, setSelectedImg] = useState(images[0].imagePath);
 
-	const [selectedImg, setSelectedImg] = useState(imageArray[0]);
+	useEffect(() => {
+		setSelectedImg(images[0].imagePath);
+	}, [images]);
 
 	return (
 		<div className={classes.container}>
@@ -16,13 +18,13 @@ const ProductImages = ({ images }) => {
 				className={classes.container_selected}
 			/>
 			<div className={classes.container_images}>
-				{imageArray.map((img, index) => (
+				{images.map((img, index) => (
 					<div className={classes.container_images_alt} key={index}>
 						<Image
-							src={require(`../../../assets/images${img}`)}
+							src={require(`../../../assets/images${img.imagePath}`)}
 							alt=""
 							size="xsmall"
-							onClick={() => setSelectedImg(img)}
+							onClick={() => setSelectedImg(img.imagePath)}
 						/>
 					</div>
 				))}

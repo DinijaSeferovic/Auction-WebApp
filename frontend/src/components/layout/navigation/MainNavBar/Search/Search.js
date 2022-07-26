@@ -10,7 +10,7 @@ const Search = () => {
 				type={"text"}
 				placeholder={"Try enter: Shoes"}
 				size={"medium"}
-				className="input"
+				className="search_input"
 			/>
 			<div className={classes.search_icon}>
 				<Icon alt="search" href="" size="small" src={searchIcon} />

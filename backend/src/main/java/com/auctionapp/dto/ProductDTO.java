@@ -26,8 +26,6 @@ public class ProductDTO {
 
     private String description;
 
-    private String imagePath;
-
     private Integer sellerId;
 
     private Double startPrice;
