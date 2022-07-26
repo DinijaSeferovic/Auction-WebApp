@@ -14,7 +14,7 @@
     <name>auctionapp</name>
     <description>auctionapp</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>8</java.version>
     </properties>
     <dependencies>
         <dependency>
@@ -101,9 +101,9 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>8.5.13</version>
                 <configuration>
-                    <url>jdbc:postgresql://ec2-3-248-121-12.eu-west-1.compute.amazonaws.com:5432/dbi5b4m0bd39ks</url>
-                    <user>smrafoywscldkx</user>
-                    <password>bec7b51ea9aab1b78a9821f70cb4295d92711050230ccfbc7bd9fba01a62ed61</password>
+                    <url>jdbc:postgresql://localhost:5432/auctionappdb</url>
+                    <user>postgres</user>
+                    <password>password</password>
                 </configuration>
             </plugin>
         </plugins>
