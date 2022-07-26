@@ -1,6 +1,9 @@
 {
   "name": "react-frontend",
   "version": "0.1.0",
+  "engines": {
+    "node": "14.x"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -9,9 +12,8 @@
     "classnames": "^2.3.1",
     "node-sass": "^7.0.1",
     "react": "^18.2.0",
-    "react-breadcrumbs": "^2.1.7",
+    "react-app-polyfill": "^3.0.0",
     "react-dom": "^18.2.0",
-    "react-router-breadcrumbs": "^2.1.2",
     "react-scripts": "5.0.1",
     "use-react-router-breadcrumbs": "^3.2.1",
     "web-vitals": "^2.1.4"
@@ -43,5 +45,5 @@
   "devDependencies": {
     "react-router-dom": "^6.3.0"
   },
-  "proxy": "http://localhost:8080"
+  "proxy": "https://auction-app-abhint.herokuapp.com/"
 }

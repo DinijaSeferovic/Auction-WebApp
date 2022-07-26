@@ -53,11 +53,23 @@
 		}
 	}
 
+	&_disabled {
+		background-color: $secondary;
+		color: $dark;
+		border: none;
+		cursor: auto;
+		opacity: 0.6;
+	}
+
 	&_content {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
 		gap: 16px;
+
+		&_icon {
+			padding-bottom: 4px;
+		}
 	}
 }

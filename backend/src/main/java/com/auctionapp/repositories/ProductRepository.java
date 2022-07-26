@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Integer> {
@@ -14,4 +15,6 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
     Page< Product > findByEndDateAfter(LocalDateTime date, Pageable pageable);
 
     Product findTopByEndDateAfterOrderByEndDateAsc(LocalDateTime date);
+
+    Product findById(UUID id);
 }

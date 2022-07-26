@@ -1,7 +1,7 @@
 import React from "react";
 import "./Tab.scss";
 
-const Tab = ({ activeTab, setActiveTab, label }) => {
+const Tab = ({ activeTab, setActiveTab, label, size }) => {
 	const handleClick = () => {
 		setActiveTab(label);
 	};
@@ -9,7 +9,7 @@ const Tab = ({ activeTab, setActiveTab, label }) => {
 	return (
 		<div>
 			<li
-				className={`tab_listitem${
+				className={`tab_listitem_${size}${
 					activeTab === label ? "_active" : ""
 				}`}
 				onClick={handleClick}

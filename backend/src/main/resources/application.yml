@@ -5,9 +5,9 @@ spring:
     hibernate:
       ddl-auto: none
   datasource:
-    url: jdbc:postgresql://localhost:5432/auctionappdb
-    username: postgres
-    password: password
+    url: ${DATASOURCE_URL}
+    username: ${DATASOURCE_USERNAME}
+    password: ${DATASOURCE_PASSWORD}
     driverClassName: org.postgresql.Driver
   flyway:
     locations: db/migration
@@ -16,6 +16,3 @@ server:
   error:
     include-binding-errors: always
     include-message: always
-
-
-

@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.94533a1f.css",
+    "main.js": "/static/js/main.fbfb4269.js",
+    "static/media/man-about.jpg": "/static/media/man-about.1e6b55a7f209bea23a69.jpg",
+    "static/media/product-woman-shirt.png": "/static/media/product-woman-shirt.203d8c5d2f639aa74492.png",
+    "static/media/product-man-shirt2.png": "/static/media/product-man-shirt2.a36ff9770be8821d96a5.png",
+    "static/media/product-woman-bag.png": "/static/media/product-woman-bag.af1edc7c67b8b75c91e2.png",
+    "static/media/product-man-shirt.png": "/static/media/product-man-shirt.59fe4d8c1e966aae346b.png",
+    "static/media/product-running-shoes.png": "/static/media/product-running-shoes.12877e78f14561d0a124.png",
+    "static/media/product-shoes.png": "/static/media/product-shoes.806a85cca651106494e8.png",
+    "static/media/product-woman-bag2.png": "/static/media/product-woman-bag2.5d5c3f9d532c52e69fd0.png",
+    "static/media/product-woman-shirt2.png": "/static/media/product-woman-shirt2.5d40d22aaf96e0cfd5f7.png",
+    "static/media/product-running-shoes3.png": "/static/media/product-running-shoes3.8f8eb504403b2bb04be9.png",
+    "static/media/product-plate.png": "/static/media/product-plate.0139e607838141cf714c.png",
+    "static/media/cowgirl-about.jpeg": "/static/media/cowgirl-about.c22425e22b4b04327daf.jpeg",
+    "static/media/product-running-shoes2.png": "/static/media/product-running-shoes2.d0c74dc3a121dccc29c9.png",
+    "static/media/product-cutlery.png": "/static/media/product-cutlery.2991a307a51b77c6ff7c.png",
+    "static/media/product-cutlery2.png": "/static/media/product-cutlery2.475420f28f7e6f1eea4e.png",
+    "static/media/product-paper-bag.png": "/static/media/product-paper-bag.af7e185549997f2c142d.png",
+    "static/media/product-candles.png": "/static/media/product-candles.22a307884efcb1824b28.png",
+    "static/media/product-plate2.png": "/static/media/product-plate2.4ea3d4a8461352467f4c.png",
+    "static/media/product-candles2.png": "/static/media/product-candles2.95e4805c80aee5b9f7e5.png",
+    "static/media/product-paper-bag2.png": "/static/media/product-paper-bag2.0a3c7a919649dd2d4e6e.png",
+    "static/media/girl-about.jpeg": "/static/media/girl-about.e68b048fbe5553f606e6.jpeg",
+    "index.html": "/index.html",
+    "main.94533a1f.css.map": "/static/css/main.94533a1f.css.map",
+    "main.fbfb4269.js.map": "/static/js/main.fbfb4269.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.94533a1f.css",
+    "static/js/main.fbfb4269.js"
+  ]
+}

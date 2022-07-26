@@ -5,7 +5,7 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	padding: 12px 20px;
+	padding-right: 20px;
 	width: 550px;
 	height: 60px;
 	background: $light;
@@ -19,26 +19,22 @@
 		width: 400px;
 	}
 
-	form {
-		width: 90%;
+	&_input {
+		border: 0px;
+		width: 100%;
+		height: 50px;
 
-		input {
-			border: 0px;
-			width: 100%;
-			height: 50px;
-
-			&:focus {
-				outline: none;
-			}
+		&:focus {
+			outline: none;
 		}
+	}
 
-		input::placeholder {
-			font-family: "Lato";
-			font-style: normal;
-			font-weight: 300;
-			font-size: 16px;
-			line-height: 19px;
-		}
+	input::placeholder {
+		font-family: "Lato";
+		font-style: normal;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 19px;
 	}
 
 	&_icon {

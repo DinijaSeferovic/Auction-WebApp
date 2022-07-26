@@ -1,11 +1,14 @@
 package com.auctionapp.domains;
 
-import lombok.*;
-import org.hibernate.annotations.Formula;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -36,9 +39,6 @@ public class Product {
     private String description;
 
     @Column
-    private String imagePath;
-
-    @Column
     private UUID sellerId;
 
     @Column(nullable = false)
@@ -53,5 +53,3 @@ public class Product {
     @Column
     private UUID buyerId;
 }
-
-

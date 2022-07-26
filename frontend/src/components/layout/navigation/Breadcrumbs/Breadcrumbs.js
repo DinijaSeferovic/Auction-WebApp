@@ -5,7 +5,14 @@ import Icon from "../../../Icon/Icon";
 import classes from "./Breadcrumbs.module.scss";
 
 const Breadcrumbs = () => {
-	const breadcrumbs = useBreadcrumbs();
+	const routes = [
+		{ path: "/about-us", breadcrumb: "About Us" },
+		{ path: "/terms-and-conditions", breadcrumb: "Terms and Conditions" },
+		{ path: "/privacy-policy", breadcrumb: "Privacy and policy" },
+		{ path: "/single-product", breadcrumb: null },
+		{ path: "/single-product/:id", breadcrumb: "Single Product" },
+	];
+	const breadcrumbs = useBreadcrumbs(routes);
 
 	return (
 		<div className={classes.breadcrumbs}>

@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
@@ -30,6 +31,10 @@ public class ProductService  {
         return convertEntityToDto(productRepository.findTopByEndDateAfterOrderByEndDateAsc(LocalDateTime.now()));
     }
 
+    public ProductDTO getProduct(UUID id) {
+        return convertEntityToDto(productRepository.findById(id));
+    }
+    
     public List< ProductDTO > getProductsLastChance(int page, int limit){
         Pageable paging = PageRequest.of(page, limit, Sort.by(Sort.Order.asc("endDate")));
         Page< Product > pagedResult = productRepository.findByEndDateAfter(LocalDateTime.now(), paging);
@@ -64,4 +69,3 @@ public class ProductService  {
         return productDTO;
     }
 }
-

@@ -2,7 +2,10 @@ package com.auctionapp.dto;
 
 import com.auctionapp.domains.Category;
 import com.auctionapp.domains.Subcategory;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -22,8 +25,6 @@ public class ProductDTO {
     private Subcategory subcategory;
 
     private String description;
-
-    private String imagePath;
 
     private Integer sellerId;
 
